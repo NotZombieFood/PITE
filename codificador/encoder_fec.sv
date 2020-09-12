@@ -18,7 +18,15 @@ encoder_fec_controller controller(
     .en(en),
     .req(req),
     .ack(ack),
-    .buff_empty()
+    .ack_encoder(),
+    .ack_decoder(),
+    .ack_modulator(),
+    .ack_demodulator(),
+    .req_encoder(),
+    .req_decoder(),
+    .req_modulator(),
+    .req_demodulator(),
+    .buff_empty(),
     .buff_full(),
     .wr_en_buff(),
     .rd_en_buff(),
@@ -56,7 +64,9 @@ encoder encoder1(
     .clk(clk),
     .rst_n(rst_n),
     .en(),
+    .req(),
     .data_in(),
+    .ack(),
     .data_out()
 );
 
@@ -64,7 +74,9 @@ modulator modulator1(
     .clk(clk),
     .rst_n(rst_n),
     .en(),
+    .req(),
     .data_in(),
+    .ack(),
     .data_out()
 );
 
@@ -72,7 +84,9 @@ demodulator demodulator1(
     .clk(clk),
     .rst_n(rst_n),
     .en(),
+    .req(),
     .data_in(),
+    .ack(),
     .data_out()
 );
 
@@ -80,7 +94,9 @@ decoder decoder1(
     .clk(clk),
     .rst_n(rst_n),
     .en(),
+    .req(),
     .data_in(),
+    .ack(),
     .data_out()
 );
 
