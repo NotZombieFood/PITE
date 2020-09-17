@@ -1,4 +1,4 @@
-import module_encoder_fec::*
+import encoder_fec_pkg::*;
 
 module fifo(
     input clk,

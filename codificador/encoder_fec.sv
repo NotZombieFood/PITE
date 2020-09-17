@@ -7,9 +7,9 @@ module encoder_fec(
     input rst_n,
     input en,
     input req,
-    message_data_t data_in,      //data sensed by ADC
+    input message_data_t data_in,      //data sensed by ADC
     output logic ack,
-    message_data_t data_out     //Data sent to DAC
+    output message_data_t data_out     //Data sent to DAC
 );
 
 //Control signals
@@ -31,6 +31,7 @@ logic buff_full_encoder;
 logic buff_full_decoder;
 logic buff_rd_valid_encoder;
 logic buff_rd_valid_decoder;
+logic buff_rd_valid;
 logic wr_en_buff_encoder;
 logic wr_en_buff_decoder;
 logic rd_en_buff_encoder;

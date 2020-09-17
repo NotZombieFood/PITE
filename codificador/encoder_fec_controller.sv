@@ -1,4 +1,4 @@
-import encoder_fec_pck::*;
+import encoder_fec_pkg::*;
 
 module encoder_fec_controller(
     input clk,
@@ -15,6 +15,7 @@ module encoder_fec_controller(
     input ack_decoder,
     input ack_modulator,
     input ack_demodulator,
+	 input buff_rd_valid,
     output logic req_encoder,
     output logic req_decoder,
     output logic req_modulator,
@@ -26,7 +27,11 @@ module encoder_fec_controller(
     output logic en_modulator,
     output logic en_demodulator,
     output logic en_decoder,
+	 output logic rd_en_buff_decoder,
+	 output logic rd_en_buff_encoder,
+	 output logic wr_en_buff_decoder,
+	 output logic wr_en_buff_encoder
     
 );
 
-end module //encoder_fec_controller
+endmodule //encoder_fec_controller

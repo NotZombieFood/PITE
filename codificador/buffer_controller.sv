@@ -12,7 +12,7 @@ module buffer_controller(
     output logic wr_en_buff1,
     output logic wr_en_buff2,
     output logic rd_en_buff1,
-    output logic rd_en_buff2,
+    output logic rd_en_buff2
 );
 
 endmodule //buffer_controller

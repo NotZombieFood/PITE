@@ -10,4 +10,4 @@ module demodulator(
     output demodulated_message_data_t data_out
 );
 
-end module //demodulator
+endmodule //demodulator

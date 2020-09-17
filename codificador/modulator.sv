@@ -10,4 +10,4 @@ module modulator(
     output modulated_message_data_t data_out
 );
 
-end module //modulator
+endmodule //modulator

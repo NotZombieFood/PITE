@@ -11,4 +11,4 @@ module encoder(
 );
 
 
-end module //encoder
+endmodule //encoder
