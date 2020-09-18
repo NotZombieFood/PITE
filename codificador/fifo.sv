@@ -62,6 +62,9 @@ always_ff @(posedge clk or negedge rst_n) begin
 			data_out <= 0;
 			rd_valid <= 0;
 		end
+	end else begin
+		data_out <= 0;
+		rd_valid <= 0;
 	end
 end
 

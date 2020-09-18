@@ -47,7 +47,7 @@ initial begin
 	#100;
 	@(posedge clk);
 	//Read complete buffer
-	read_complete_buffer(clk, rd_en, data_out, empty, memory_queue);
+	read_complete_buffer(clk, rd_en, data_out, empty, rd_valid, memory_queue);
 	#100;
 	$finish;
 
