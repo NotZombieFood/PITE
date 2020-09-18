@@ -27,7 +27,10 @@ buffer_controller controller(
     .rd_en_buff2()
 );
 
-fifo buff1(
+fifo #(
+	.WIDTH(DATA_WIDTH),
+	.ENTRIES(ENTRIES_BUFFER)
+)buff1(
     .clk(clk),
     .rst_n(rst_n),
     .wr_en(),
@@ -39,7 +42,10 @@ fifo buff1(
     .full()
 );
 
-fifo buff2(
+fifo #(
+	.WIDTH(DATA_WIDTH),
+	.ENTRIES(ENTRIES_BUFFER)
+)buff2(
     .clk(clk),
     .rst_n(rst_n),
     .wr_en(),
