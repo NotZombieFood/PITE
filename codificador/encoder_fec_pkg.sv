@@ -4,13 +4,15 @@ package encoder_fec_pkg;
 	
 	 parameter CLK_PERIOD = 50;
 	 localparam HALF_CLK_PERIOD = CLK_PERIOD/2;
-    parameter DATA_WIDTH = 32;
+    parameter DATA_WIDTH = 8;
 	 parameter ENTRIES_BUFFER = 1024;
+	 parameter PARITY_BITS = 5;
+	 localparam HAMMING_WIDTH = 16
 
-    typedef logic[DATA_WIDTH-1:0]   message_data_t;
-    typedef logic[DATA_WIDTH-1:0]   encoded_message_data_t;
-    typedef logic[DATA_WIDTH-1:0]   modulated_message_data_t;
-    typedef logic[DATA_WIDTH-1:0]   demodulated_message_data_t;
+    typedef logic[DATA_WIDTH-1:0]      message_data_t;
+    typedef logic[HAMMING_WIDTH-1:0]   encoded_message_data_t;
+    typedef logic[DATA_WIDTH-1:0]      modulated_message_data_t;
+    typedef logic[DATA_WIDTH-1:0]      demodulated_message_data_t;
 	 
 	 
 //TASKS FOR TEST BENCHES
