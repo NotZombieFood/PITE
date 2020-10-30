@@ -39,7 +39,7 @@ logic rd_en_buff_decoder;
 //Data Signals
 message_data_t                  message_buff_2_encoder;
 encoded_message_data_t          encoded_message;
-modulated_message_data_t        modulated_message;
+modulated_message_data_t        modulated_message[0:3];
 demodulated_message_data_t      demodulated_message;
 message_data_t                  decoded_message;
 
@@ -69,8 +69,11 @@ encoder_fec_controller controller(
     .en_encoder(en_encoder),
     .en_modulator(en_modulator),
     .en_demodulator(en_demodulator),
-    .en_decoder(en_decoder)
+    .en_decoder(en_decoder),
+	 .buff_rd_valid_encoder(buff_rd_valid_encoder),
+	 .buff_rd_valid_decoder(buff_rd_valid_decoder)
 );
+
 
 circular_buffer buff_encoder(          //Buffer before encoder
     .clk(clk),

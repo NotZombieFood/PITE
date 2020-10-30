@@ -7,12 +7,13 @@ package encoder_fec_pkg;
     parameter DATA_WIDTH = 8;
 	 parameter ENTRIES_BUFFER = 1024;
 	 parameter PARITY_BITS = 5;
-	 localparam HAMMING_WIDTH = 16
+	 parameter	MODULATOR_WIDTH = 4;
+	 localparam HAMMING_WIDTH = 16;
 
     typedef logic[DATA_WIDTH-1:0]      message_data_t;
     typedef logic[HAMMING_WIDTH-1:0]   encoded_message_data_t;
-    typedef logic[DATA_WIDTH-1:0]      modulated_message_data_t;
-    typedef logic[DATA_WIDTH-1:0]      demodulated_message_data_t;
+    typedef logic[MODULATOR_WIDTH-1:0]   modulated_message_data_t;
+    typedef logic[HAMMING_WIDTH-1:0]   demodulated_message_data_t;
 	 
 	 
 //TASKS FOR TEST BENCHES

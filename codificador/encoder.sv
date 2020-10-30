@@ -29,7 +29,7 @@ always_ff @(posedge clk or negedge rst_n) begin
 		data_out <= {extended_data[10:4],p_bit[4],extended_data[3:1],p_bit[3],extended_data[0],p_bit[2:0]};
 		ack <= 1;
 	end else begin
-		data_out <= 0;
+		//data_out <= 0;
 		ack <= 0;
 	end
 end

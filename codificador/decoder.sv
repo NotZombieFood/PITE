@@ -52,7 +52,6 @@ always_ff @(posedge clk or negedge rst_n) begin
 		data_out <= extended_message[7:0];
 		ack <= 1;
 	end else begin
-		data_out <= 0;
 		ack <= 0;
 	end
 end
